@@ -1,0 +1,12 @@
+table{
+  
+    border: 4px solid blueviolet;
+    background-color: cornflowerblue;
+
+}
+table .tr{
+    border: crimson;
+}
+table .tr .td{
+    border: cyan;
+}

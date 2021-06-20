@@ -1,0 +1,42 @@
+
+
+
+
+<div class="form">
+    <h1>Fill up this  Form</h1>
+ 
+    <form #login="ngForm" (ngSubmit)="submit(login)">
+        <div class="form-grop">
+            <label for="first-name">First Name </label> <br>
+            <input type="text" name="first-name" class="form-control" ngModel required  minlength="3" maxlength="8"  #firstname="ngModel"><br>
+            <span class="error" *ngIf="firstname.invalid && firstname.touched">Please Enter Your First Name</span>
+        </div>
+        <br>
+        <div class="form-grop">
+            <label for="last-name">Last Name </label> <br>
+            <input type="text" name="last-name" class="form-control" ngModel required minlength="3" maxlength="8" #lastname="ngModel"><br>
+            <span class="error" *ngIf="lastname.invalid && lastname.touched">Please Enter Your Last Name</span>
+        </div>
+        <br>
+        <div class="form-grop">
+            <label for="Email">Email </label> <br>
+            <input type="email" name="email" class="form-control"ngModel required  minlength="3" maxlength="8" #emailname="ngModel"><br>
+            <span class="error" *ngIf="emailname.invalid && emailname.touched">Please Enter Email</span>
+        </div>
+        <br>
+        <div class="form-grop">
+            <label for="phone-number">Phone Number </label> <br>
+            <input type="number" name="phone-number" class="form-control"ngModel required  minlength="3" maxlength="8" #phonename="ngModel"><br>
+            <span class="error" *ngIf="phonename.invalid && phonename.touched">Please Enter Your Phone Number</span>
+        </div>
+        <br>
+        <div class="form-grop">
+            <label for="password">Passsword </label><br>
+            <input type="password" name="password" class="form-control" ngModel required  minlength="8" maxlength="13" #passwordname="ngModel"><br>
+            <span class="error" *ngIf="passwordname.invalid && passwordname.touched">Please Enter Your Passsword </span>
+        </div>
+        <br>
+        <button type="submit" [disabled]="login.invalid">Submit</button>
+    </form>
+
+</div>

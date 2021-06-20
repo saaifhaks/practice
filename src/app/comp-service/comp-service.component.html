@@ -1,0 +1,13 @@
+<h1>Fetching data from the API in this Table</h1>
+<table border="1">
+    <tr>
+    <th>id </th>
+    <th>title</th>
+    <th>Userid</th>
+</tr>
+<tr *ngFor="let item of data">
+    <td>{{item.id}}</td>
+    <td>{{item.title}}</td>
+    <td>{{item.userId}}</td>
+</tr>
+</table>
